@@ -1,0 +1,47 @@
+/* =======================================================
+    when making changes "iconfonts" :ensure update perfectly
+    ensure topics below:
+    font-family         -2times
+    src: url()          -1times
+    [note: or change fonts name from source folder]
+    change pseudo class -as many icons as
+======================================================= */
+
+@font-face {
+  font-family: 'iconfonts';
+  src: url('../fonts/iconfonts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "iconfonts";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =======================================================
+    change pseudo-class
+======================================================= */
+
+.icon-bars-solid:before { content: '\e801'; }
+.icon-xmark-solid:before { content: '\e802'; }
+.icon-desktop-solid:before { content: '\e803'; }
+.icon-rocket-solid:before { content: '\e804'; }
+.icon-sliders-solid:before { content: '\e805'; }
+.icon-database-solid:before { content: '\e807'; }
+.icon-facebook-brands:before { content: '\e808'; }
+.icon-linkedin-brands:before { content: '\e809'; }
+.icon-twitter-brands:before { content: '\e80a'; }
+.icon-youtube-brands:before { content: '\e80b'; }

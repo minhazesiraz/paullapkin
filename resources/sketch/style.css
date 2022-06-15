@@ -1,0 +1,699 @@
+/* =======================================================
+    Template Name: Personal website PSD template #2
+======================================================= */
+
+/* =======================================================
+    Cascading Style Sheets 3 :Index
+
+    1. General :Cascading Style Sheets 3
+    2. Prince
+    3. About
+    4. Process
+    5. Experience
+    6. Portfolio
+    7. Quote
+    8. Contact
+    9. Princess
+    10.
+======================================================= */
+
+/* =======================================================
+    when making changes "iconfonts" :ensure update perfectly
+    ensure topics below:
+    font-family         -2times
+    src: url()          -1times
+    [note: or change fonts name from source folder]
+    change pseudo class -as many icons as
+======================================================= */
+
+/* =======================================================
+    1. General :Cascading Style Sheets 3
+======================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    text-rendering: optimizeLegibility;
+    line-height: 1.15;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =======================================================
+    Reusable Components
+======================================================= */
+
+.rows {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 65px 0;
+}
+
+.button,
+.button:link,
+.button:visited {
+    font-size: 175%;
+    letter-spacing: 3px;
+    font-family: 'Raleway' sans-serif;
+    border: 2px solid #ff2b4a;
+    color: #fff;
+    background: #ff2b4a;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    padding: 7px 0;
+    /* Pseudo-Class Effects */
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+    background: transparent;
+    color: #ff2b4a;
+}
+
+/* =======================================================
+    2. Prince
+======================================================= */
+
+#prince {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/prince.jpg') no-repeat center / cover;
+}
+
+.webpage-logo {
+    float: left;
+    height: 55px;
+    margin-top: 32.5px;
+}
+
+.navigation-icon {
+    float: right;
+    margin-top: 35px;
+}
+
+.icon-bars-solid {
+    font-size: 40px;
+    color: #f31620;
+    border: 2px solid white;
+    border-radius: 10px 25px 55px 20px;
+}
+
+.prince-text-crate {
+    max-width: 1200px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 650%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+h1::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+}
+
+.prince-text-crate span {
+    font-size: 230%;
+    color: #fff;
+    margin-top: 20px;
+    display: block; 
+}
+
+.scroll-down {
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    position: absolute;
+    margin: auto;
+    width: 40px;
+}
+
+.scroll-down a ion-icon {
+    position: relative;
+    font-size: 500%;
+    -webkit-animation: scroll-down 5s infinite ease;
+    animation: scroll-down 5s infinite ease;
+}
+
+@keyframes scroll-down {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+@-webkit-keyframes arrow {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: 30px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+/* =======================================================
+    Hamburger Menu
+======================================================= */
+
+.navigation-icon-container {
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.90);
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.icon-xmark-solid {
+    position: absolute;
+    font-size: 400%;
+    float: right;
+    top: 35px;
+    right: 353px;
+    border: 2px solid #fff;
+    color: #f31620;
+    border-radius: 10px 25px 55px 20px;
+}
+
+icon-xmark-solid:hover {
+    cursor: pointer;
+}
+
+.hamburger-menu ul li a {
+    font-size: 350%;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hamburger-menu {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.hamburger-menu ul li {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hamburger-menu ul li a:hover {
+    color: red;
+    transition-duration: 0.5s;
+}
+
+.hamburger-menu ul li a svg {
+    margin-right: 15px;
+}
+
+.uk-sticky {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.uk-sticky-fixed .webpage-logo {
+    margin: 12px 0;
+}
+
+.uk-sticky-fixed .icon-bars-solid {
+    border: 2px solid red;
+}
+
+.uk-sticky-fixed .navigation-icon {
+    margin: 15.5px 0;
+}
+
+/* =======================================================
+    3. About
+======================================================= */
+
+.grid-about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 85px;
+}
+
+.paul-lapkin {
+    width: 100%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.intro {
+    font-size: 175%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #787680;
+}
+
+.description {
+    font-size: 155%;
+    color: #787680;
+    margin: 40px 0;
+}
+
+.about-button {
+    float: right;
+}
+
+/* =======================================================
+    4. Process
+======================================================= */
+
+#process {
+    background: #f6f6f6;
+}
+
+.process-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process-title p {
+    font-size: 160%;
+    color: #6f6f6f;
+    margin-top: 20px;
+}
+
+.grid-process-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    grid-gap: 10px;
+    
+}
+
+.grid-process-items:nth-child(1) {
+    background: #10c6fc;
+}
+
+.grid-process-items:nth-child(2) {
+    background: #002453;
+}
+
+.grid-process-items:nth-child(3) {
+    background: #835aeb;
+}
+
+.grid-process-items:nth-child(4) {
+    background: #ff2b4a;
+}
+
+.grid-process-items {
+    background: red;
+    padding: 80px 0;
+}
+
+.grid-process-items i {
+    font-size: 450%;
+    color: #fff;
+}
+
+.grid-process-items h4 {
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* =======================================================
+    5. Experience
+======================================================= */
+
+#experience {
+    background: url(images/experience.jpg) no-repeat center top / cover;
+    background-attachment: fixed;
+}
+
+.grid-experience-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.grid-experience-items,
+.grid-education-items {
+    background: rgba(0, 0, 0, 0.65);
+    padding: 50px 35px;
+}
+
+.grid-experience-items h3,
+.grid-education-items h3 {
+    font-size: 200%;
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.grid-experience-items h2,
+.grid-education-items h2 {
+    font-size: 180%;
+    color: #fff;
+}
+
+.grid-experience-items span,
+.grid-education-items span {
+    font-size: 170%;
+    color: #fff;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.grid-experience-items p,
+.grid-education-items p {
+    font-size: 150%;
+    color: #fff;
+}
+
+#experience hr {
+    border-bottom: 1px solid #fff;
+    margin: 30px 0;
+}
+
+/* =======================================================
+    6. Portfolio
+======================================================= */
+
+.portfolio-title {
+    text-align: center;
+}
+
+.portfolio-title h2 {
+    font-size: 230%;
+}
+
+.portfolio-title span {
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 185%;
+}
+
+.grid-portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(260px, auto);
+}
+
+.grid-portfolio-items img {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-portfolio-items:nth-child(1) {
+    background: #000;
+}
+
+.grid-portfolio-items:nth-child(5) {
+    grid-column: 1/3;
+    height: 260px;
+}
+
+.portfolio-filter {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.portfolio-filter button {
+    margin: 0 10px;
+    font-size: 20px;
+    border: 1px solid red;
+    background: red;
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio-filter button:hover {
+    cursor: pointer;
+    background: transparent;
+    color: red;
+}
+
+.portfolio-filter .mixitup-control-active {
+    background: green;
+    border: 1px solid green;
+}
+
+.uk-lightbox-items li img {
+    height: 100%;
+}
+
+/* =======================================================
+    7. Quote
+======================================================= */
+
+#quote {
+    background: #64cbc0;
+}
+
+.grid-quote-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+
+.quote img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.signature img {
+    height: 50px;
+    margin: 20px 0;
+}
+
+.grid-quote-items p {
+    font-size: 170%;
+}
+
+.grid-quote-items span {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* =======================================================
+    8. Contact
+======================================================= */
+
+#contact {
+    background: url(images/contact.jpg) no-repeat center top / cover;
+    background-attachment: fixed;
+}
+
+.grid-contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-contact-items:nth-child(1) {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 25px 20px;
+}
+
+.grid-contact-items h3 {
+    color: #fff;
+    font-size: 150%;
+    text-transform: uppercase;
+}
+
+.single-form input[type="text"],
+.single-form input[type="email"],
+.single-form textarea {
+    background: transparent;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 150%;
+    color: #fff;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.single-form-button {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.nested-grid-contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+}
+
+.nested-grid-contact-items {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 25px 20px;
+}
+
+.nested-grid-contact-items p {
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Start Contact Form Crate for Red StarMark */
+
+input[required]+label {
+    color: #fff;
+    font-family: Arial;
+    font-size: 140%;
+    position: relative;
+    left: 10px;
+    bottom: 29.5px;
+}
+
+textarea[required]+label {
+    color: #fff;
+    font-family: Arial;
+    font-size: 140%;
+    position: relative;
+    left: 10px;
+    bottom: 202px;
+}
+
+input[required]+label:after,
+textarea[required]+label:after {
+    content: '*';
+    color: red;
+}
+
+/* show the placeholder when input has no content (no content = invalid) */
+
+input[required]:invalid+label,
+textarea [required]:invalid+label {
+    display: inline-block;
+}
+
+/* hide the placeholder when input has some text typed in */
+
+input[required]:valid+label,
+textarea[required]:valid+label {
+    visibility: hidden;
+}
+
+/* End Contact Form Crate for Red StarMark */
+
+/* =======================================================
+    9. Princess
+======================================================= */
+
+#princess {
+    background: #000;
+    padding: 50px;
+    text-align: center;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+ul li i {
+    color: #fff;
+    font-size: 25px;
+}
+
+.princess-social-icons {
+    margin-bottom: 20px;
+}
+
+ul li a i {
+    padding: 0 10px;
+}
+
+hr {
+    margin: 0px 0px 0px 12.5px;
+}
+
+.vertical-line {
+    border-left: 2px solid #fff;
+    height: 30px;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 150%;
+}
+
+.copyright a {
+    color: red;
+    border-bottom: 1px solid red;
+}
+
+.totop {
+    font-size: 25px;
+    color: #fff;
+    float: right;
+    border: 1px solid #fff;
+}
+
+.uk-link, a {
+    color: #fff;
+}
+
+.uk-link, a:hover {
+    color: #fff;
+}
+
+
+
+
+
+

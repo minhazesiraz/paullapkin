@@ -1,0 +1,24 @@
+@media screen and (max-width: 1235px) {
+    .rows {
+        width: 100%;
+        padding: 0 35px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .single-form textarea[required] + label {
+        bottom: 182px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    div#MixItUp3C673B.grid-portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .prince-text-crate h1 {
+        font-size: 515%;
+    }
+    .prince-text-crate span {
+        font-size: 191%;
+    }
+}
